@@ -6,9 +6,9 @@
 
 import os
 
-from PyQt5.QtCore import QStandardPaths
-from PyQt5.QtWidgets import QAction, QDialog, QMessageBox
-from PyQt5.QtGui import QIcon
+from qgis.PyQt.QtCore import QStandardPaths
+from qgis.PyQt.QtWidgets import QAction, QDialog, QMessageBox
+from qgis.PyQt.QtGui import QIcon
 
 from qgis.core import QgsVectorLayer
 

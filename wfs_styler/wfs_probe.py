@@ -4,9 +4,9 @@
 # Licensed under the EUPL
 # ---------------------------------------------------------------------
 
-from PyQt5.QtCore import QUrl
-from PyQt5.QtNetwork import QNetworkRequest
-from PyQt5.QtXml import QDomDocument
+from qgis.PyQt.QtCore import QUrl
+from qgis.PyQt.QtNetwork import QNetworkRequest
+from qgis.PyQt.QtXml import QDomDocument
 
 from qgis.core import QgsBlockingNetworkRequest
 from urllib.parse import urlparse
