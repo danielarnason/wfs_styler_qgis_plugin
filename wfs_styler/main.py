@@ -6,7 +6,7 @@
 
 import os
 
-from qgis.PyQt.QtCore import QStandardPaths
+from qgis.PyQt.QtCore import QDir
 from qgis.PyQt.QtWidgets import QAction, QDialog, QMessageBox
 from qgis.PyQt.QtGui import QIcon
 
@@ -77,7 +77,7 @@ class WfsStylerPlugin():
 
         #self.pick_style_dlg.show()
         #self.generate_calc_input_dlg.show()
-        result = self.pick_style_dlg.exec_()
+        result = self.pick_style_dlg.exec()
         if result:
             style_name = self.pick_style_dlg.list_styles.currentItem().text()
             print(f'Picked style: {style_name}')
@@ -86,7 +86,7 @@ class WfsStylerPlugin():
             return
 
 
-        tmp_dir = QStandardPaths.writableLocation(QStandardPaths.TempLocation)
+        tmp_dir = QDir.tempPath()
         sld_fn = os.path.join(tmp_dir, 'qgis_wfs_styler_plugin_style.sld')
         #print(sld_fn)
 
